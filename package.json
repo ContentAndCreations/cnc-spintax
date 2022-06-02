@@ -1,0 +1,32 @@
+{
+  "name": "cnc-spintax",
+  "version": "1.0.0",
+  "description": "Spintax library written in typescript",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node lib/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ContentAndCreations/cnc-spintax.git"
+  },
+  "keywords": [
+    "spintax",
+    "spin",
+    "syntax",
+    "unspin",
+    "text",
+    "spinner"
+  ],
+  "author": "Content & Creations",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ContentAndCreations/cnc-spintax/issues"
+  },
+  "homepage": "https://github.com/ContentAndCreations/cnc-spintax#readme",
+  "devDependencies": {
+    "typescript": "^4.7.2"
+  },
+  "files": ["lib/**/*"]
+}
