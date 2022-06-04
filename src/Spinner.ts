@@ -99,10 +99,11 @@ class SpinFragment {
         let r = this.fragmentString;
         for(let i = 0; i < this.subFragments.length; i++) {
             const newArray: string[] = []
+            const unspun = this.subFragments[i].unspinAll()
             for(const mainstring of r){
                 const substitution = Spinner.FragmentSubstitution(i)
                 if(mainstring.indexOf(substitution) !== -1) {
-                    for(const substring of this.subFragments[i].unspinAll()) {
+                    for(const substring of unspun) {
                         newArray.push(mainstring.replace(substitution, substring))
                     }
                 }
