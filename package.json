@@ -1,6 +1,6 @@
 {
   "name": "cnc-spintax",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Spintax library for typescript, node modules and commonjs",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/esm5/index.js",
