@@ -2,10 +2,17 @@
   "name": "cnc-spintax",
   "version": "1.0.0",
   "description": "Spintax library written in typescript",
-  "main": "lib/index.js",
+  "main": "./lib/commonjs/index.js",
+  "module": "./lib/esm5/index.js",
+  "es2015": "./lib/esm2015/index.js",
+  "typings": "./lib/types/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "test": "npm run build && node lib/test.js"
+    "build": "npm run build:commonjs && npm run build:es2015 && npm run build:esm5 && npm run build:types",
+    "build:commonjs": "tsc --module commonjs --target es2018 --outDir ./lib/commonjs",
+    "build:es2015": "tsc --module ES2015 --target es2015 --outDir ./lib/es2015",
+    "build:esm5": "tsc --module ES2015 --target ES5 --outDir ./lib/esm5",
+    "build:types": "tsc --target es2018 --declaration --emitDeclarationOnly --outDir ./lib/types",
+    "test": "tsc --project tsconfig.tst.json && node test/test.js"
   },
   "repository": {
     "type": "git",
@@ -13,10 +20,10 @@
   },
   "keywords": [
     "spintax",
-    "spin",
-    "syntax",
+    "spin syntax",
     "unspin",
-    "text",
+    "text spinner",
+    "typescript",
     "spinner"
   ],
   "author": "Content & Creations",
@@ -25,8 +32,5 @@
     "url": "https://github.com/ContentAndCreations/cnc-spintax/issues"
   },
   "homepage": "https://github.com/ContentAndCreations/cnc-spintax#readme",
-  "devDependencies": {
-    "typescript": "^4.7.2"
-  },
   "files": ["lib/**/*"]
 }
