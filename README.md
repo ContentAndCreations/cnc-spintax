@@ -1,5 +1,7 @@
 # cnc-spintax
 
+Spintax library for typescript, node modules and commonjs. Easily generate variations from spin syntax.
+
 ## Features
 
 - Generate all/random variations from spin syntax
@@ -36,7 +38,7 @@
 
     // get minimal/maximal length of the text of variations
     console.log("min: " + s.minLength())
-    console.log("max: "+s.maxLength())
+    console.log("max: " + s.maxLength())
 
     // Validation
     try {
@@ -108,3 +110,10 @@
             throw e
         }
     }
+
+### Substitution function
+
+cnc-spintax substitutes bracket pairs {} by default with numbered replacements. Should you wish to use these brackets with numbers (i.e. \\\\{0\\\\}) in you spin text you should redefine the substitution function to a sequence you won't use. For example:
+
+    Spinner.Spinner.FragmentSubstitution = (i) => "__{"+i+"}__"
+    Spinner.FragmentSubstitution = (i) => "__{"+i+"}__" // Typescript

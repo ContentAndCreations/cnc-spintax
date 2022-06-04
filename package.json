@@ -1,7 +1,7 @@
 {
   "name": "cnc-spintax",
   "version": "1.0.0",
-  "description": "Spintax library written in typescript",
+  "description": "Spintax library for typescript, node modules and commonjs",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/esm5/index.js",
   "es2015": "./lib/esm2015/index.js",
@@ -31,6 +31,6 @@
   "bugs": {
     "url": "https://github.com/ContentAndCreations/cnc-spintax/issues"
   },
-  "homepage": "https://github.com/ContentAndCreations/cnc-spintax#readme",
+  "homepage": "https://contentandcreations.nl",
   "files": ["lib/**/*"]
 }
